@@ -1,13 +1,40 @@
+#BLIBLIOTECA PYTHON E EXCEL
 import xlrd
+import insere_dados
 
 def main():
+	#EX: janeiro2019.xlsx
 	arq = input("Insira o nome do arquivo: ")
-	print(arq)
 	planilha = get_planilha(arq)
 	nome = get_nome_planilha(planilha)
 	imprime_planilha(planilha)
+	lista_linhas(planilha)
 
 	return 0
+
+def lista_linhas(planilha):
+	n_col = num_colunas(planilha)
+	n_lin = num_linhas(planilha)
+	
+	linha = []
+	lst_linhas = []
+	col = 0
+
+	for lin in range(n_lin):
+		while col < n_col:
+			cel = get_celula(planilha,lin,col)
+			linha.append(cel)
+			col = col + 1
+		print(linha)
+		lst_linhas.append(linha)
+		linha = []
+		
+		col = 0
+
+	insere_dados.insere_linha_crime(lst_linhas)
+	
+	return 0
+
 
 def imprime_planilha(planilha):
 	n_col = num_colunas(planilha)
