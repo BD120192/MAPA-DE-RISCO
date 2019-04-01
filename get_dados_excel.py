@@ -1,6 +1,6 @@
 #BLIBLIOTECA PYTHON E EXCEL
 import xlrd
-import insere_dados
+import insere_simples
 
 def main():
 	#EX: janeiro2019.xlsx
@@ -8,6 +8,7 @@ def main():
 	planilha = get_planilha(arq)
 	nome = get_nome_planilha(planilha)
 	imprime_planilha(planilha)
+	insere_simples.cria_tabela()
 	lista_linhas(planilha)
 
 	return 0
@@ -31,8 +32,8 @@ def lista_linhas(planilha):
 		
 		col = 0
 
-	insere_dados.insere_linha_crime(lst_linhas)
-	
+	insere_simples.insere_tabela(lst_linhas)
+
 	return 0
 
 
