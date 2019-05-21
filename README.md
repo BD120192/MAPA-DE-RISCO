@@ -1,7 +1,10 @@
 # TRABALHO 1 - MAPA DE RISCO - BANCO DE DADOS 1
-**1.COMPONENTES**
+**1. COMPONENTES**
 >Integrantes do grupo<br>
-
+>Aroldo Vargas: aroldovneto@gmail.com
+>Bruno Moreto: brunomoretodeoliveira2@gmail.com
+>Heitor:
+>Warleson:
 
 **DESCRIÇÃO DO PROJETO:**
 
