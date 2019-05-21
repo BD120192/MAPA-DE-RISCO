@@ -11,8 +11,8 @@
 **3. MINI-MUNDO**
 
 **4. MOCKUPS**
->Protótipo das telas: https://balsamiq.com
-![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/balsamiq.png?raw=true "Title")
+>Protótipo das telas: https://balsamiq.com<br>
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/TELAS/TELAS - BD1.pdf?raw=true "Title")
 
 **DESCRIÇÃO DO PROJETO:**
 
