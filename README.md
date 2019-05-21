@@ -3,7 +3,7 @@
 >Integrantes do grupo<br>
 >Aroldo Vargas: aroldovneto@gmail.com<br>
 >Bruno Moreto: brunomoretodeoliveira2@gmail.com<br>
->Heitor:<br>
+>Heitor Dias: heitor-mnz@hotmail.com<br>
 >Warleson:<br>
 
 **2. INTRODUÇÃO E MOTIVAÇÃO**
