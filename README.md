@@ -21,6 +21,9 @@
 ![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/comentario.JPG?raw=true "Title")
 ![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/comentario_enviado.JPG?raw=true "Title")
 
+**5. DIAGRAMA DE CLASSES**
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/DIGRAMA%20DE%20CLASSES%20MAPA%20DE%20RISCO%20VF.jpg?raw=true "Title")
+
 **DESCRIÇÃO DO PROJETO:**
 
 > A ideia do projeto é determinar uma rota de deslocamento ou uma linha mais segura para usuário, baseando-se nos índices de criminalidade de uma determinada região. O sistema analisará o horário e o local de menor criminalidade das ruas nas rotas existentes até o destino inserido pelo usuário, e determinará, baseado em dados estatísticos, a melhor rota de deslocamento. Os dados estatísticos serão oriundos da Secretaria de Estado de Segurança Pública e Defesa Social (SESP) e o sistema atuará somente com ruas e linhas válidas no estado do Espírito Santo. O sistema realiza dois tipos de pesquisa, pela rua ou atraves da linha de onibus, depois retorna uma classificação de acordo com o numero de crimes encontrados em determinada rua ou no itinerario da linha de onibus.
