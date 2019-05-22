@@ -12,11 +12,11 @@
 
 **4. MOCKUPS**
 >Protótipo das telas: https://balsamiq.com<br>
-![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/TELAS/TELAS - BD1.pdf?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/TELAS/menu_inicial.jpg?raw=true "Title")
 
 **DESCRIÇÃO DO PROJETO:**
 
-> A ideia do projeto é traçar uma rota de deslocamento segura para usuário, baseando-se nos índices de criminalidade de uma determinada região. O sistema analisará o horário e o local de menor criminalidade das ruas nas rotas existentes até o destino inserido pelo usuário, e determinará, baseado em dados estatísticos, a melhor rota de deslocamento. Os dados estatísticos serão oriundos da Secretaria de Estado de Segurança Pública e Defesa Social (SESP) e o sistema atuará somente com rotas válidas para a grande Vitória, no estado do Espírito Santo.
+> A ideia do projeto é determinar uma rota de deslocamento ou uma linha mais segura para usuário, baseando-se nos índices de criminalidade de uma determinada região. O sistema analisará o horário e o local de menor criminalidade das ruas nas rotas existentes até o destino inserido pelo usuário, e determinará, baseado em dados estatísticos, a melhor rota de deslocamento. Os dados estatísticos serão oriundos da Secretaria de Estado de Segurança Pública e Defesa Social (SESP) e o sistema atuará somente com ruas e linhas válidas no estado do Espírito Santo. O sistema realiza dois tipos de pesquisa, pela rua ou atraves da linha de onibus, depois retorna uma classificação de acordo com o numero de crimes encontrados em determinada rua ou no itinerario da linha de onibus.
 
 **LINK DAS ESTATÍSTICAS CRIMINAIS:**
 
