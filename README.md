@@ -12,7 +12,7 @@
 
 **4. MOCKUPS**
 >Protótipo das telas: https://balsamiq.com<br>
-![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/TELAS/menu_inicial.jpg?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/menu_inicial.JPG?raw=true "Title")
 
 **DESCRIÇÃO DO PROJETO:**
 
