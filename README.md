@@ -13,6 +13,12 @@
 **4. MOCKUPS**
 >Protótipo das telas: https://balsamiq.com<br>
 ![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/menu_inicial.JPG?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/pesquisa_rua.JPG?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/pesquisa_linha.JPG?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/resultado_rua.JPG?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/resultado_linha.JPGraw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/comentario.JPGraw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/comentario_enviado.JPGraw=true "Title")
 
 **DESCRIÇÃO DO PROJETO:**
 
