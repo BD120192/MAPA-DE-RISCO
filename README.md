@@ -4,7 +4,7 @@
 >Aroldo Vargas: aroldovneto@gmail.com<br>
 >Bruno Moreto: brunomoretodeoliveira2@gmail.com<br>
 >Heitor Dias: heitor-mnz@hotmail.com<br>
->Warleson:<br>
+>Warleson: warleson.sales@gmail.com<br> 
 
 **2. INTRODUÇÃO E MOTIVAÇÃO**
 
