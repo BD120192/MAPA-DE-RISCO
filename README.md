@@ -22,7 +22,7 @@
 ![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/comentario_enviado.JPG?raw=true "Title")
 
 **5. DIAGRAMA DE CLASSES**
-![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/DIGRAMA%20DE%20CLASSES%20MAPA%20DE%20RISCO%20VF.jpg?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/DIGRAMA%20DE%20CLASSES%20MAPA%20DE%20RISCO%20VF2.jpg?raw=true "Title")
 
 **DESCRIÇÃO DO PROJETO:**
 
