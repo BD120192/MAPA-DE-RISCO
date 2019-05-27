@@ -41,6 +41,9 @@
 >Banco de Dados: https://www.postgresql.org <br>
 >Protótipo das telas: https://balsamiq.com
 
-
+**BIBLIOTECAS PYTHON UTILIZADAS**
+>Banco de Dados e Python: https://pypi.org/project/psycopg2/ <br>
+>Excel e Python: https://pypi.org/project/xlrd/ <br>
+>Lista com cidades: https://github.com/Sidon/py-ufbr <br>
 
 
