@@ -7,6 +7,7 @@
 >Warleson: warleson.sales@gmail.com<br> 
 
 **2. INTRODUÇÃO E MOTIVAÇÃO**
+> O projeto pretende ranquear ruas do Espirito Santo e linhas de onibus da rede Transcol de acordo com a quantidade de crimes que ocorreram previamente. A violência no estado do Espirito Santo é notável. A cidade da Serra recentemente estava listada entre as 30 mais violentas do Brasil. Tendo isso em vista, com o intúito de disponibilizar uma alternativa para prevenção de crimes violentos ...
 
 **3. MINI-MUNDO**
 
