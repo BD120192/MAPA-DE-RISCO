@@ -1,31 +1,71 @@
-DESCRI«√O DOS DADOS:
+DESCRI√á√ÉO DOS DADOS:
 
 Explicar a funcao de cada uma das tabelas e seus respectivos atributos.
 
 Tabela cidade: 
+- id:
+- nome_cidade:
 
 Tabela bairro: 
+- id:
+- nome_bairro:
 
 Tabela rua: 
+- id:
+- nome_rua:
+- quantidade_crimes:
+- id_classificacao:
+- id_bairro:
+- id_cidade:
 
 Tabela classificacao: 
+- id:
+- tipo:
+- id_descricao:
 
 Tabela descricao: 
+- id:
+- textopadrao:
 
 Tabela comentario: 
+- id:
+- comentario_usuario:
+- id_usuario:
+- id_tipo_comentario:
 
 Tabela tipo comentario: 
+- id:
+- descricao_tipo:
 
 Tabela usuario: 
+- id:
+- nome:
+- login:
+- senha:
+- cpf:
+- email:
 
 Tabela linha: 
+- id:
+- numero_linha:
+- id_classificacao:
 
 Tabela linha_passa_rua: 
+- id:
+- id_rua:
+- id_linha:
 
 Tabela crime:
 
 Tabela tipo_crime:
+- id:
+- descricao_crime:
 
 Tabela vitima:
+- id:
+- idade:
+- id_sexo:
 
 Tabela sexo:
+- id:
+- genero:
