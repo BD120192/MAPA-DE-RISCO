@@ -1,0 +1,31 @@
+DESCRIÇÃO DOS DADOS:
+
+Explicar a funcao de cada uma das tabelas e seus respectivos atributos.
+
+Tabela cidade: 
+
+Tabela bairro: 
+
+Tabela rua: 
+
+Tabela classificacao: 
+
+Tabela descricao: 
+
+Tabela comentario: 
+
+Tabela tipo comentario: 
+
+Tabela usuario: 
+
+Tabela linha: 
+
+Tabela linha_passa_rua: 
+
+Tabela crime:
+
+Tabela tipo_crime:
+
+Tabela vitima:
+
+Tabela sexo:
