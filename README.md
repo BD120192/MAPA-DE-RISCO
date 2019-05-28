@@ -7,9 +7,12 @@
 >Warleson: warleson.sales@gmail.com<br> 
 
 **2. INTRODUÇÃO E MOTIVAÇÃO**
-> O projeto pretende ranquear ruas do Espirito Santo e linhas de onibus da rede Transcol de acordo com a quantidade de crimes que ocorreram previamente. A violência no estado do Espirito Santo é notável. A cidade da Serra recentemente estava listada entre as 30 mais violentas do Brasil. Tendo isso em vista, com o intúito de disponibilizar uma alternativa para prevenção de crimes violentos ...
+> O projeto pretende ranquear ruas do Espirito Santo e linhas de onibus da rede Transcol de acordo com a quantidade de crimes que ocorreram previamente. A violência no estado do Espirito Santo é notável. A cidade da Serra recentemente estava listada entre as 30 mais violentas do Brasil. Tendo isso em vista, pretende-se disponibilizar uma alternativa para prevenção de crimes violentos, para que o cidadão do nosso estado se sinta confortável ao fazer a escolha de qual caminho tomar para ir ao serviço, ou qual linha de ônibus pegar para voltar pra casa. 
+
+
 
 **3. MINI-MUNDO**
+> A ideia do projeto é determinar uma rota de deslocamento ou uma linha mais segura para usuário, baseando-se nos índices de criminalidade de uma determinada região. O sistema analisará o horário e o local de menor criminalidade das ruas nas rotas existentes até o destino inserido pelo usuário, e determinará, baseado em dados estatísticos, a melhor rota de deslocamento. Os dados estatísticos serão oriundos da Secretaria de Estado de Segurança Pública e Defesa Social (SESP) e o sistema atuará somente com ruas e linhas válidas no estado do Espírito Santo. O sistema realiza dois tipos de pesquisa, pela rua ou atraves da linha de onibus, depois retorna uma classificação de acordo com o numero de crimes encontrados em determinada rua ou no itinerario da linha de onibus.
 
 **4. MOCKUPS**
 >Protótipo das telas: https://balsamiq.com<br><br>
@@ -25,9 +28,7 @@
 **5. DIAGRAMA DE CLASSES**
 ![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/Diagrama_Classes.jpg?raw=true "Title")
 
-**DESCRIÇÃO DO PROJETO:**
 
-> A ideia do projeto é determinar uma rota de deslocamento ou uma linha mais segura para usuário, baseando-se nos índices de criminalidade de uma determinada região. O sistema analisará o horário e o local de menor criminalidade das ruas nas rotas existentes até o destino inserido pelo usuário, e determinará, baseado em dados estatísticos, a melhor rota de deslocamento. Os dados estatísticos serão oriundos da Secretaria de Estado de Segurança Pública e Defesa Social (SESP) e o sistema atuará somente com ruas e linhas válidas no estado do Espírito Santo. O sistema realiza dois tipos de pesquisa, pela rua ou atraves da linha de onibus, depois retorna uma classificação de acordo com o numero de crimes encontrados em determinada rua ou no itinerario da linha de onibus.
 
 **LINK DAS ESTATÍSTICAS CRIMINAIS:**
 
