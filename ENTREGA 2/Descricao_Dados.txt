@@ -14,9 +14,9 @@ Relaciona um Bairro a um ID
 
 Tabela rua:  
 Contabiliza e classifica a quantidade de crimes e o grau de perigo de uma rua. 
-- id: 
-- nome_rua: 
-- quantidade_crimes: 
+- id: chave primaria 
+- nome_rua: especifica a rua onde ocorreu o crime
+- quantidade_crimes: indica quantos crimes aconteceram nessa rua
 - id_classificacao: chave estrangeira da tabela classificação
 - id_bairro: chave estrangeira da tabela bairro 
 - id_cidade: chave estrangeira da tabela chave
@@ -24,7 +24,7 @@ Contabiliza e classifica a quantidade de crimes e o grau de perigo de uma rua.
 
 Tabela classificacao:  
 Indica o grau de periculosidade de uma rua ou linha de ônibus 
-- id: 
+- id: chave primária
 - tipo: 
 - id_descricao: 
 
