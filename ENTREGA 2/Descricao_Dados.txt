@@ -2,12 +2,12 @@ DESCRIÇÃO DOS DADOS:
 Explicar a funcao de cada uma das tabelas e seus respectivos atributos. 
 
 Tabela cidade: 
-Relaciona o nome da cidade à um ID 
+Relaciona o nome da cidade a um ID 
 - id: 
 - nome_cidade: 
 
 Tabela bairro:  
-Relaciona um Bairro à um ID 
+Relaciona um Bairro a um ID 
 - id:
 - nome_bairro: 
 
@@ -17,9 +17,9 @@ Contabiliza e classifica a quantidade de crimes e o grau de perigo de uma rua.
 - id: 
 - nome_rua: 
 - quantidade_crimes: 
-- id_classificacao: 
-- id_bairro: 
-- id_cidade: 
+- id_classificacao: chave estrangeira da tabela classificação
+- id_bairro: chave estrangeira da tabela bairro 
+- id_cidade: chave estrangeira da tabela chave
 
 
 Tabela classificacao:  
