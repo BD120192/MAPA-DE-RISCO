@@ -1,71 +1,102 @@
-DESCRIÇÃO DOS DADOS:
-
-Explicar a funcao de cada uma das tabelas e seus respectivos atributos.
+DESCRIÇÃO DOS DADOS: 
+Explicar a funcao de cada uma das tabelas e seus respectivos atributos. 
 
 Tabela cidade: 
-- id:
-- nome_cidade:
+Relaciona o nome da cidade à um ID 
+- id: 
+- nome_cidade: 
 
-Tabela bairro: 
+Tabela bairro:  
+Relaciona um Bairro à um ID 
 - id:
-- nome_bairro:
+- nome_bairro: 
 
-Tabela rua: 
-- id:
-- nome_rua:
-- quantidade_crimes:
-- id_classificacao:
-- id_bairro:
-- id_cidade:
 
-Tabela classificacao: 
-- id:
-- tipo:
-- id_descricao:
+Tabela rua:  
+Contabiliza e classifica a quantidade de crimes e o grau de perigo de uma rua. 
+- id: 
+- nome_rua: 
+- quantidade_crimes: 
+- id_classificacao: 
+- id_bairro: 
+- id_cidade: 
 
-Tabela descricao: 
-- id:
+
+Tabela classificacao:  
+Indica o grau de periculosidade de uma rua ou linha de ônibus 
+- id: 
+- tipo: 
+- id_descricao: 
+
+
+Tabela descricao:  
+Determina um texto padrão para cada nível de periculosidade  
+- id: 
 - textopadrao:
 
-Tabela comentario: 
-- id:
-- comentario_usuario:
-- id_usuario:
-- id_tipo_comentario:
 
-Tabela tipo comentario: 
-- id:
-- descricao_tipo:
+Tabela comentario:  
+Identifica um comentario adicionado por um usuário para uma rua ou para uma linha de ônibus 
+- id: 
+- comentario_usuario: 
+- id_usuario: 
+- id_tipo_comentario: 
 
-Tabela usuario: 
-- id:
-- nome:
-- login:
-- senha:
-- cpf:
-- email:
 
-Tabela linha: 
-- id:
-- numero_linha:
-- id_classificacao:
+Tabela tipo comentario:  
+Indica o tipo de comentário que será adicionado 
+- id: 
+- descricao_tipo: 
 
-Tabela linha_passa_rua: 
-- id:
-- id_rua:
-- id_linha:
 
-Tabela crime:
+Tabela usuario:  
+Identifica o usuário  
+- id: 
+- nome: 
+- login: 
+- senha: 
+- cpf: 
+- email: 
 
-Tabela tipo_crime:
-- id:
-- descricao_crime:
 
-Tabela vitima:
-- id:
-- idade:
-- id_sexo:
+Tabela linha:  
+Identifica uma linha de ônibus e seu grau de periculosidade  
+- id: 
+- numero_linha: 
+- id_classificacao: 
 
-Tabela sexo:
-- id:
-- genero:
+
+Tabela linha_passa_rua:  
+- id: 
+- id_rua: 
+- id_linha: 
+
+
+Tabela crime: 
+- data 
+- Hora 
+- id 
+- id_vítima 
+- id_rua 
+- id_cidade 
+- id_tipo_crime 
+- id_bairro 
+
+
+Tabela tipo_crime: 
+Indica qual o tipo penal do crime 
+- id: 
+- descricao_crime: 
+
+
+Tabela vitima: 
+Identifica as vítimas e as quantifica de acordo com os critérios, idade e sexo. 
+- id: 
+- idade: 
+- id_sexo: 
+
+ 
+Tabela sexo: 
+Indica o gênero  
+- id: 
+- genero: 
