@@ -18,3 +18,17 @@ insert into usuario (id,nome,login,senha,cpf,email) values ('1222','juliana silv
 insert into usuario (id,nome,login,senha,cpf,email) values ('1233','amanda nunes','anunes','112358','45621487440','amandanunes@hotmail.com');
 insert into usuario (id,nome,login,senha,cpf,email) values ('1244','barbara gomes','bgomes','barbara1997','43520875419','barbara_g2019@gmail.com');
 insert into usuario (id,nome,login,senha,cpf,email) values ('1255','bruno moreto','bmoreto','bruno123','25013625741','brunomoreto@hotmail.com');
+
+                                                                                                                                                        
+  # INSERT TIPO_COMENTARIO 
+
+insert into tipo_comentario (id, descricao_tipo) values ('12','Faltam serem incluídas as linhas de baldeação');
+insert into tipo_comentario (id, descricao_tipo) values ('13','Incluír uma seção de ocorrências em tempo real');
+insert into tipo_comentario (id, descricao_tipo) values ('14','Maior investimento nas linhas que fazem T.Cariacíca -> T.Vila Velha');
+insert into tipo_comentario (id, descricao_tipo) values ('15','Incluír o Seletivo na lista de ônibus');
+
+# INSERT SEXO
+
+insert into sexo (id, genero) values ('1001','F');
+insert into sexo (id, genero) values ('1002','M');
+                                                 
