@@ -32,3 +32,8 @@ insert into tipo_comentario (id, descricao_tipo) values ('15','Incluír o Seleti
 insert into sexo (id, genero) values ('1001','F');
 insert into sexo (id, genero) values ('1002','M');
                                                  
+insert into classificacao (id,tipo,id_descricao) values ('2001','A','1');
+insert into classificacao (id,tipo,id_descricao) values ('2002','B','2');
+insert into classificacao (id,tipo,id_descricao) values ('2003','C','3');
+insert into classificacao (id,tipo,id_descricao) values ('2004','D','4');
+insert into classificacao (id,tipo,id_descricao) values ('2005','E','5');
