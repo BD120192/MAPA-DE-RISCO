@@ -8,7 +8,7 @@ INSERT INTO descricao(textopadrao) VALUES('ALTAMENTE SEGURO'),('SEGURO'),('INTER
 #EXECUTAR O ARQUIVO cidades.py
 
 #INSERÇÃO NA TABELA USUARIO
-insert into usuario (id,nome,login,senha,cpf,email) values ('1155',aroldo vargas','aroldovargas','123abc','14925798740','aroldovargas@gmail.com');
+insert into usuario (id,nome,login,senha,cpf,email) values ('1155','aroldo vargas','aroldovargas','123abc','14925798740','aroldovargas@gmail.com');
 insert into usuario (id,nome,login,senha,cpf,email) values ('1166','alyson gustavo','agustavo','gusta2000','21425498740','alyson_g10@hotmail.com')
 insert into usuario (id,nome,login,senha,cpf,email) values ('1177','warleson sales', 'wsales','w123','12587465210','warleson.sales@gmail.com');
 insert into usuario (id,nome,login,senha,cpf,email) values ('1188','heitor dias','hdias','dias987','24312387650','heitordias@hotmail.com');
