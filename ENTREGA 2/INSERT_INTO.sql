@@ -27,3 +27,21 @@ INSERT INTO sexo(genero) VALUES('M'),('F');
 
 # INSERT CLASSIFICACAO
 INSERT INTO classificacao (tipo,id_descricao) VALUES ('A','1'),('B','2'),('C','3'),('D','4'),('E','5');
+
+# INSERT BAIRRO
+#Seleciona o nome do bairro e o id da cidade em que o bairro esta inserido.
+SELECT ci.id,cb.bairro FROM crimebase cb INNER JOIN cidade ci ON cb.cidade = ci.nome_cidade GROUP BY cb.bairro,cb.cidade,ci.id;
+
+#Insere na tabela bairro o select que foi feito dos bairros com seus respectivos id das cidade onde o bairro esta
+INSERT INTO bairro (nome_bairro,id_cidade) SELECT cb.bairro,ci.id FROM crimebase cb
+INNER JOIN cidade ci ON cb.cidade = ci.nome_cidade
+GROUP BY cb.bairro,ci.id;
+
+# INSERT VITIMA
+#Seleciona a idade e o id_sexo da vitimas.
+SELECT cb.idade,se.id FROM crimebase cb INNER JOIN sexo se ON cb.sexo = se.genero GROUP BY cb.idade,se.id;
+
+#Insere na tabela vitima o select com as idades e id_sexo das vitimas
+INSERT INTO vitima (idade,id_sexo) SELECT cb.idade,se.id FROM crimebase cb
+INNER JOIN sexo se ON cb.sexo = se.genero
+GROUP BY cb.idade,se.id;
