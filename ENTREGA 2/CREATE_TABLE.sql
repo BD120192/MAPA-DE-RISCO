@@ -2,7 +2,7 @@
 
 
 #CRIAÇÃO DA TABELA USUARIO
-CREATE TABLE usuario(id serial NOT NULL,nome varchar(100),login varchar(50),senha varchar(16),cpf int,email varchar(50),PRIMARY KEY(id));
+CREATE TABLE usuario(id serial NOT NULL,nome varchar(100),login varchar(50),senha varchar(16),cpf varchar(11),email varchar(50),PRIMARY KEY(id));
 
 #CRIAÇÃO DA TABELA TIPO_COMENTARIO
 CREATE TABLE tipo_comentario(id serial NOT NULL,descricao_tipo varchar(50),PRIMARY KEY(id));
