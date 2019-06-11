@@ -51,7 +51,27 @@
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
+      select * from bairro;
+      select * from cidade;
+      select * from classificacao;
+      select * from comentario;
+      select * from crime;
+      select * from descricao;
+      select * from linha;
+      select * from linha_passa_rua;
+      select * from rua;
+      select * from sexo;
+      select * from tipo_comentario;
+      select * from tipo_crime;
+      select * from usuario;
+      select * from vitima;
+      
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
+      select id, numero_linha from linha where id_classificacao=1;
+      select id, nome_rua from rua where id_classificacao=2;
+      select id, numero_linha from linha where linha.id_classificacao=3;
+      select id, numero_linha from linha where linha.id_classificacao=4;
+      select id, numero_linha from linha where linha.id_classificacao=5;
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)
