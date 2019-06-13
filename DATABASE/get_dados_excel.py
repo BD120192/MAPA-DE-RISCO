@@ -5,8 +5,8 @@ import create_table
 
 def main():
 
-	#EX: janeiro2019.xlsx
-	arq = input("Insira o nome do arquivo: ")
+	#arq = input("Insira o nome do arquivo: ")
+	arq = "janeiro2019.xlsx"
 	planilha = get_planilha(arq)
 	nome = get_nome_planilha(planilha)
 	#imprime_planilha(planilha)
