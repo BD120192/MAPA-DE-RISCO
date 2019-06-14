@@ -28,7 +28,7 @@
 #### 4.2 TABELA DE DADOS DO SISTEMA
 
 ### 5.MODELO CONCEITUAL<br>
-![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/modelo_conceitual.png?raw=true "Title")
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/modeloconceitualFonteGrande.jpg?raw=true "Title")
 
 #### 5.1 VALIDAÇÃO DO MODELO CONCEITUAL
 
