@@ -74,7 +74,7 @@
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4) - AROLDO
       SELECT id, nome_rua FROM rua WHERE id_classificacao=3;
       SELECT id, nome_rua, quantidade_crimes, id_classificacao FROM rua WHERE id_cidade = 77;
-      SELECT * FROM crime WHERE data = '2019-01-23';
+      SELECT * FROM crime WHERE id_tipo_crime = 2;
       SELECT * FROM vitima WHERE id_sexo = 2;
       SELECT * FROM vitima WHERE idade < 21;
       SELECT id, numero_linha FROM linha WHERE id_classificacao = 4;
