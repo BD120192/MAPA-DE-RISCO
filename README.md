@@ -28,6 +28,7 @@
 #### 4.2 TABELA DE DADOS DO SISTEMA
 
 ### 5.MODELO CONCEITUAL<br>
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/modelo_conceitual.png?raw=true "Title")
 
 #### 5.1 VALIDAÇÃO DO MODELO CONCEITUAL
 
@@ -45,37 +46,69 @@
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
 
+      CREATE TABLE usuario(id serial NOT NULL,nome varchar(100),login varchar(50),senha varchar(16),cpf varchar(11),email varchar(50),PRIMARY       KEY(id));
+
+      CREATE TABLE tipo_comentario(id serial NOT NULL,descricao_tipo varchar(50),PRIMARY KEY(id));
+
+      CREATE TABLE comentario (id serial NOT NULL,comentario_usuario varchar(100),id_usuario serial NOT NULL,id_tipo_comentario serial NOT         NULL, PRIMARY KEY(id),FOREIGN KEY(id_usuario) REFERENCES usuario(id),FOREIGN KEY(id_tipo_comentario) REFERENCES tipo_comentario(id));
+
+      CREATE TABLE descricao (id serial NOT NULL, textopadrao varchar(100) NOT NULL,PRIMARY KEY(id));
+
+      CREATE TABLE classificacao (id serial NOT NULL, tipo char(1) NOT NULL,id_descricao serial NOT NULL, PRIMARY KEY(id),FOREIGN KEY               (id_descricao) REFERENCES descricao(id));
+
+      CREATE TABLE cidade (id serial NOT NULL, nome_cidade varchar(50),PRIMARY KEY(id));
+
+      CREATE TABLE bairro (id serial NOT NULL, nome_bairro varchar(100) NOT NULL,id_cidade serial NOT NULL,PRIMARY KEY(id),FOREIGN KEY             (id_cidade) REFERENCES cidade(id));
+
+      CREATE TABLE rua (id serial NOT NULL, nome_rua varchar(100) NOT NULL,quantidade_crimes integer,id_classificacao serial NOT                   NULL,id_bairro serial NOT NULL,id_cidade serial NOT NULL, PRIMARY KEY(id),FOREIGN KEY (id_cidade) REFERENCES cidade(id),FOREIGN KEY           (id_bairro) REFERENCES bairro(id),FOREIGN KEY (id_classificacao) REFERENCES classificacao(id));
+
+      CREATE TABLE sexo(id serial NOT NULL,genero varchar(1),PRIMARY KEY(id));
+
+      CREATE TABLE vitima(id serial NOT NULL,idade int,id_sexo serial NOT NULL,PRIMARY KEY(id),FOREIGN KEY (id_sexo) REFERENCES sexo(id));
+
+      CREATE TABLE tipo_crime(id serial NOT NULL,descricao_crime varchar (100) NOT NULL,PRIMARY KEY(id));
+
+      CREATE TABLE linha(id serial NOT NULL,numero_linha integer NOT NULL,id_classificacao serial NOT NULL,PRIMARY KEY(id),FOREIGN KEY             (id_classificacao) REFERENCES classificacao(id));
+
+      CREATE TABLE linha_passa_rua(id serial NOT NULL,id_rua serial NOT NULL, id_linha serial NOT NULL,PRIMARY KEY(id),FOREIGN KEY (id_rua)         REFERENCES rua(id),FOREIGN KEY (id_linha) REFERENCES linha(id));
+
+      CREATE TABLE crime(id serial NOT NULL,data date,hora time,id_vitima serial,id_rua serial,id_bairro serial,id_cidade serial,                   id_tipo_crime serial,PRIMARY KEY(id),FOREIGN KEY (id_vitima) REFERENCES vitima(id), FOREIGN KEY (id_rua) REFERENCES rua(id), FOREIGN         KEY (id_bairro) REFERENCES bairro(id), FOREIGN KEY (id_cidade) REFERENCES cidade(id), FOREIGN KEY (id_tipo_crime) REFERENCES                 tipo_crime(id));
+
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
 
 #### 8.4 Principais fluxos de informação e principais tabelas do sistema
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
-      select * from bairro;
-      select * from cidade;
-      select * from classificacao;
-      select * from comentario;
-      select * from crime;
-      select * from descricao;
-      select * from linha;
-      select * from linha_passa_rua;
-      select * from rua;
-      select * from sexo;
-      select * from tipo_comentario;
-      select * from tipo_crime;
-      select * from usuario;
-      select * from vitima;
+      SELECT * from bairro;
+      SELECT * FROM cidade;
+      SELECT * FROM classificacao;
+      SELECT * FROM comentario;
+      SELECT * FROM crime;
+      SELECT * FROM descricao;
+      SELECT * FROM linha;
+      SELECT * FROM linha_passa_rua;
+      SELECT * FROM rua;
+      SELECT * FROM sexo;
+      SELECT * FROM tipo_comentario;
+      SELECT * FROM tipo_crime;
+      SELECT * FROM usuario;
+      SELECT * FROM vitima;
       
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
-      select id, numero_linha from linha where id_classificacao=1;
-      select id, nome_rua from rua where id_classificacao=2;
-      select id, numero_linha from linha where linha.id_classificacao=3;
-      select id, numero_linha from linha where linha.id_classificacao=4;
-      select id, numero_linha from linha where linha.id_classificacao=5;
+      SELECT id, nome_rua FROM rua WHERE id_classificacao=3;
+      SELECT id, nome_rua, quantidade_crimes, id_classificacao FROM rua WHERE id_cidade = 77;
+      SELECT * FROM crime WHERE data = '2019-01-23';
+      SELECT * FROM vitima WHERE id_sexo = 2;
+      SELECT * FROM vitima WHERE idade < 21;
+      SELECT id, numero_linha FROM linha WHERE id_classificacao = 4;
+      
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)
+      select cr.id_cidade,ci.nome_cidade,count(cr.id_cidade) from crime cr inner join cidade ci on(cr.id_cidade = ci.id)
+      group by cr.id_cidade,ci.nome_cidade order by count(*) desc limit(5);
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)
