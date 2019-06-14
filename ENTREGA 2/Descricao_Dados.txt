@@ -1,102 +1,80 @@
-DESCRIÇÃO DOS DADOS: 
+DESCRIÇÃO DOS DADOS:
+
 Explicar a funcao de cada uma das tabelas e seus respectivos atributos. 
 
-Tabela cidade: 
-Relaciona o nome da cidade a um ID 
-- id: 
-- nome_cidade: 
 
-Tabela bairro:  
-Relaciona um Bairro a um ID 
-- id:
-- nome_bairro: 
+Tabela cidade: Tabela que relaciona o nome da cidade à um ID.
+- id:[PK] Identifica a cidade;
+- nome_cidade: campo que armazena o nome da cidade.
 
+Tabela bairro: Tabela que relaciona um Bairro à um ID.
+- id:[PK] Identifica o bairro;
+- nome_bairro: campo que armazena o nome do bairro.
 
-Tabela rua:  
-Contabiliza e classifica a quantidade de crimes e o grau de perigo de uma rua. 
-- id: chave primaria 
-- nome_rua: especifica a rua onde ocorreu o crime
-- quantidade_crimes: indica quantos crimes aconteceram nessa rua
-- id_classificacao: chave estrangeira da tabela classificação
-- id_bairro: chave estrangeira da tabela bairro 
-- id_cidade: chave estrangeira da tabela chave
+Tabela rua: Contabiliza e classifica a quantidade de crimes e o grau de perigo de uma rua.
+- id:[PK] Identifica a rua;
+- nome_rua: nome da rua;
+- quantidade_crimes: campo que quantifica os crimes;
+- id_classificacao: chave estranjeira da tabela classificacao que identifica a classificação;
+- id_bairro: chave estrajeira da tabela bairro que identifica o bairro;
+- id_cidade: chave estranjeira da tabela cidade que identifica a cidade.
 
+Tabela classificacao: Indica o grau de periculosidade de uma rua ou linha de onibus.
+- id:[PK] Identifica a classificação;
+- tipo: esse atributo apresenta uma nota de 'A' a 'E' de acordo com a periculosidade;
+- id_descricao:chave estranjeira da tabela descricao que identifica a descrição.
 
-Tabela classificacao:  
-Indica o grau de periculosidade de uma rua ou linha de ônibus 
-- id: chave primária
-- tipo: 
-- id_descricao: 
+Tabela descricao: Determina um texto padrão para cada nível de periculosidade .
+- id:[PK] Identifica a descricao;
+- textopadrao: campo que descreve o grau de segurança.
 
+Tabela comentario: Identifica um comentario adicionado por um usuário para uma rua ou para uma linha de onibus.
+- id:[PK] Identifica o comentario;
+- comentario_usuario: campo que armazena um comentário adicionado por um usuário;
+- id_usuario: chave estranjeira da tabela usuario que identifica o usuário;
+- id_tipo_comentario: chave estranjeira da tabela tipo_comentario que identifica o tipo de comentário.
 
-Tabela descricao:  
-Determina um texto padrão para cada nível de periculosidade  
-- id: 
-- textopadrao:
+Tabela tipo comentario: Tabela que indica o tipo de comentario que será adicionado.
+- id:[PK] Identifica o tipo de comentario;
+- descricao_tipo: campo que descreve se o comentário está se referindo à rua, à linha ou ao sistema.
 
+Tabela usuario: Tabela que armazena informações referentes ao usuário .
+- id:[PK] Identifica o usuário;
+- nome: campo que armazena o nome do usuário;
+- login: campo que armazenao o login;
+- senha: campo que armazena a senha do usuário;
+- cpf: campo que armazena o Cadastro de Pessoa Física do usuário;
+- email: campo que armazena o email do usuário.
 
-Tabela comentario:  
-Identifica um comentario adicionado por um usuário para uma rua ou para uma linha de ônibus 
-- id: 
-- comentario_usuario: 
-- id_usuario: 
-- id_tipo_comentario: 
+Tabela linha: Identifica uma linha de onibus e seu grau de periculosidade 
+- id:[PK] Identifica a linha
+- numero_linha: campo que armazena o numero da linha de ôninbus
+- id_classificacao: chave estranjeira da tabela classificacao que identifica a classificação.
 
+Tabela linha_rua: Tabela que relaciona a linha de ônibus com as ruas das quais a linha passa.
+- id:[PK] Identifica a relação linha_rua;
+- id_rua: chave estranjeira da tabela rua que identifica a rua;
+- id_linha: chave estranjeira da tabela linha que identifica a linha.
 
-Tabela tipo comentario:  
-Indica o tipo de comentário que será adicionado 
-- id: 
-- descricao_tipo: 
+Tabela crime: Tabela que armazena informações relacionadas ao crime.
+- data: campo que armazena a data do crime;
+- Hora: campo que armazena a hora do crime ;
+- id:[PK] Identifica o crime;
+- id_vítima: chave estranjeira da tabela vitima que identifica a vítima;
+- id_rua: chave estranjeira da tabela rua que identifica a rua;
+- id_cidade: chave estranjeira da tabela cidade que identifica a cidade;
+- id_tipo_crime: chave estranjeira da tabela tipo_crime que identifica o tipo de crime;
+- id_bairro: chave estranjeira da tabela bairro que identifica o bairro.
 
+Tabela tipo_crime: Tabela que indica qual o tipo penal do crime.
+- id:[PK] Identifica o tipo de crime;
+- descricao_crime: campo que armazena o tipo penal do crime.
 
-Tabela usuario:  
-Identifica o usuário  
-- id: 
-- nome: 
-- login: 
-- senha: 
-- cpf: 
-- email: 
+Tabela vitima: Tabela que identifica as vítimas e as quantifica de acordo com os critérios, idade e sexo.
+- id:[PK] Identifica a vítima;
+- idade: campo que armazena a idade da vítima que identifica a vítima;
+- id_sexo: chave estranjeira da tabela sexo que identifica o sexo.
 
-
-Tabela linha:  
-Identifica uma linha de ônibus e seu grau de periculosidade  
-- id: 
-- numero_linha: 
-- id_classificacao: 
-
-
-Tabela linha_passa_rua:  
-- id: 
-- id_rua: 
-- id_linha: 
-
-
-Tabela crime: 
-- data 
-- Hora 
-- id 
-- id_vítima 
-- id_rua 
-- id_cidade 
-- id_tipo_crime 
-- id_bairro 
-
-
-Tabela tipo_crime: 
-Indica qual o tipo penal do crime 
-- id: 
-- descricao_crime: 
-
-
-Tabela vitima: 
-Identifica as vítimas e as quantifica de acordo com os critérios, idade e sexo. 
-- id: 
-- idade: 
-- id_sexo: 
-
- 
-Tabela sexo: 
-Indica o gênero  
-- id: 
-- genero: 
+Tabela sexo: Tabela que indica o gênero.
+- id:[PK] Identifica o sexo;
+- genero: campo que armazena o gênero.
