@@ -35,6 +35,7 @@
 #### 5.2 DECISÕES DE PROJETO
 
 #### 5.3 DESCRIÇÃO DOS DADOS
+> https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/Descricao_Dados.txt
 
 ### 6.MODELO LÓGICO<br>
 
