@@ -89,6 +89,7 @@
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4) - HEITOR
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6) - HEITOR
 #### 9.10	SUBCONSULTAS (Mínimo 3) - AROLDO
+      SELECT * FROM crime WHERE id_vitima IN(SELECT id FROM vitima WHERE idade < 21)
 #### 9.11 Relatórios e Gráficos - GRUPO
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
