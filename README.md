@@ -71,7 +71,7 @@
       SELECT * FROM usuario;
       SELECT * FROM vitima;
       
-#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
+#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4) - AROLDO
       SELECT id, nome_rua FROM rua WHERE id_classificacao=3;
       SELECT id, nome_rua, quantidade_crimes, id_classificacao FROM rua WHERE id_cidade = 77;
       SELECT * FROM crime WHERE data = '2019-01-23';
@@ -79,17 +79,17 @@
       SELECT * FROM vitima WHERE idade < 21;
       SELECT id, numero_linha FROM linha WHERE id_classificacao = 4;
       
-#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)
-#### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)
-#### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)
+#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11) - BRUNO
+#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) - WALERSON
+#### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6) - BRUNO
+#### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6) - AROLDO
       select cr.id_cidade,ci.nome_cidade,count(cr.id_cidade) from crime cr inner join cidade ci on(cr.id_cidade = ci.id)
       group by cr.id_cidade,ci.nome_cidade order by count(*) desc limit(5);
-#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)
-#### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)
-#### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)
-#### 9.10	SUBCONSULTAS (Mínimo 3)
-#### 9.11 Relatórios e Gráficos
+#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6) 
+#### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4) - HEITOR
+#### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6) - HEITOR
+#### 9.10	SUBCONSULTAS (Mínimo 3) - AROLDO
+#### 9.11 Relatórios e Gráficos - GRUPO
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
