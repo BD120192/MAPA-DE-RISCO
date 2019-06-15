@@ -105,30 +105,45 @@
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6) - BRUNO
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6) - AROLDO
-      select cr.id_cidade,ci.nome_cidade,count(cr.id_cidade) from crime cr inner join cidade ci on(cr.id_cidade = ci.id)
-      group by cr.id_cidade,ci.nome_cidade order by count(*) desc limit(5);
+      	SELECT cr.id_cidade,ci.nome_cidade,COUNT(cr.id_cidade) FROM crime cr 
+		INNER JOIN cidade ci ON(cr.id_cidade = ci.id)
+      		GROUP BY cr.id_cidade,ci.nome_cidade ORDER BY COUNT(*) DESC LIMIT(5);
+			
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6) 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4) - HEITOR
-     	Select usuario.nome, comentario.comentario_usuario
-	from usuario right join comentario
-	on (comentario.id_usuario=usuario.id);
+     	SELECT usuario.nome, comentario.comentario_usuario
+		FROM usuario RIGHT JOIN comentario
+		ON(comentario.id_usuario=usuario.id);
 	
-     	Select crime.id, tipo_crime.descricao_crime
-	from crime left join tipo_crime
-	on (crime.id_tipo_crime=tipo_crime.id);
+     	SELECT crime.id, tipo_crime.descricao_crime
+		FROM crime LEFT JOIN tipo_crime
+		ON(crime.id_tipo_crime=tipo_crime.id);
 
-     	Select numero_linha, comentario_usuario
-	from linha left join comentario
-	on (comentario.id_linha=linha.id);
+     	SELECT numero_linha, comentario_usuario
+		FROM linha LEFT JOIN comentario
+		ON(comentario.id_linha=linha.id);
 
-     	Select  nome_rua, comentario_usuario
-	from rua right join comentario
-	on (comentario.id_rua=rua.id);
+     	SELECT nome_rua, comentario_usuario
+		FROM rua RIGHT JOIN comentario
+		ON(comentario.id_rua=rua.id);
 
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6) - HEITOR
 #### 9.10	SUBCONSULTAS (Mínimo 3) - AROLDO
-      SELECT * FROM crime WHERE id_vitima IN(SELECT id FROM vitima WHERE idade < 21)
+      	SELECT * FROM crime WHERE id_vitima IN(SELECT id FROM vitima WHERE idade < 21)
+      
+      	SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
+	    INNER JOIN vitima vi ON(cr.id_vitima =vi.id)
+	    INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
+	    INNER JOIN sexo se ON(se.id = vi.id_sexo)
+	    WHERE id_vitima IN(SELECT id FROM vitima WHERE id_sexo = 2
+			   
+	SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
+	    INNER JOIN vitima vi ON(cr.id_vitima =vi.id)
+	    INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
+	    INNER JOIN sexo se ON(se.id = vi.id_sexo)
+	    WHERE id_vitima IN(SELECT id FROM vitima WHERE idade > 60  
+			    
 #### 9.11 Relatórios e Gráficos - GRUPO
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
