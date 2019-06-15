@@ -26,6 +26,7 @@
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
 
 #### 4.2 TABELA DE DADOS DO SISTEMA
+> https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA1/Normalizacao1.xlsx
 
 ### 5.MODELO CONCEITUAL<br>
 ![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/modeloconceitualFonteGrande.jpg?raw=true "Title")
@@ -56,7 +57,7 @@
 
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
 
-#### 8.4 Principais fluxos de informação e principais tabelas do sistema
+#### 8.4 PRINCIPAIS FLUXOS DE INFORMAÇÃO E PRINCIPAIS TABELAS DO SISTEMA
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
@@ -105,53 +106,58 @@
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6) - BRUNO
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6) - AROLDO
-      	SELECT cr.id_cidade,ci.nome_cidade,COUNT(cr.id_cidade) FROM crime cr 
-		INNER JOIN cidade ci ON(cr.id_cidade = ci.id)
-      		GROUP BY cr.id_cidade,ci.nome_cidade ORDER BY COUNT(*) DESC LIMIT(5);
+      SELECT cr.id_cidade,ci.nome_cidade,COUNT(cr.id_cidade) FROM crime cr 
+	INNER JOIN cidade ci ON(cr.id_cidade = ci.id)
+	GROUP BY cr.id_cidade,ci.nome_cidade ORDER BY COUNT(*) DESC LIMIT(5);
 			
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6) 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4) - HEITOR
-     	SELECT usuario.nome, comentario.comentario_usuario
+	SELECT usuario.nome, comentario.comentario_usuario
 		FROM usuario RIGHT JOIN comentario
 		ON(comentario.id_usuario=usuario.id);
-	
-     	SELECT crime.id, tipo_crime.descricao_crime
+
+	SELECT crime.id, tipo_crime.descricao_crime
 		FROM crime LEFT JOIN tipo_crime
 		ON(crime.id_tipo_crime=tipo_crime.id);
 
-     	SELECT numero_linha, comentario_usuario
+	SELECT numero_linha, comentario_usuario
 		FROM linha LEFT JOIN comentario
 		ON(comentario.id_linha=linha.id);
 
-     	SELECT nome_rua, comentario_usuario
+	SELECT nome_rua, comentario_usuario
 		FROM rua RIGHT JOIN comentario
 		ON(comentario.id_rua=rua.id);
 
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6) - HEITOR
 #### 9.10	SUBCONSULTAS (Mínimo 3) - AROLDO
-      	SELECT * FROM crime WHERE id_vitima IN(SELECT id FROM vitima WHERE idade < 21)
+    SELECT * FROM crime WHERE id_vitima IN(SELECT id FROM vitima WHERE idade < 21)
       
-      	SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
-	    INNER JOIN vitima vi ON(cr.id_vitima =vi.id)
-	    INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
-	    INNER JOIN sexo se ON(se.id = vi.id_sexo)
-	    WHERE id_vitima IN(SELECT id FROM vitima WHERE id_sexo = 2
+    SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
+	INNER JOIN vitima vi ON(cr.id_vitima =vi.id)
+	INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
+	INNER JOIN sexo se ON(se.id = vi.id_sexo)
+	WHERE id_vitima IN(SELECT id FROM vitima WHERE id_sexo = 2
 			   
-	SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
-	    INNER JOIN vitima vi ON(cr.id_vitima =vi.id)
-	    INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
-	    INNER JOIN sexo se ON(se.id = vi.id_sexo)
-	    WHERE id_vitima IN(SELECT id FROM vitima WHERE idade > 60  
+    SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
+	INNER JOIN vitima vi ON(cr.id_vitima =vi.id)
+	INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
+	INNER JOIN sexo se ON(se.id = vi.id_sexo)
+	WHERE id_vitima IN(SELECT id FROM vitima WHERE idade > 60  
 			    
-#### 9.11 Relatórios e Gráficos - GRUPO
+#### 9.11 RELATÓRIOS e GRÁFICOS - GRUPO
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
-### 11 Backup completo do banco de dados postgres<br>
+### 11 BACKUP COMPLETO DO BANCO DE DADOS POSTGRESQL<br>
 
 ### 12	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
 > https://github.com/BD120192/MAPA-DE-RISCO/tree/master/DATABASE
+
+
+### 13 DIFICULDADES ENCONTRADAS PELO GRUPO<br>
+	Inicialmente a principal dificuldade encontrada pelo o grupo foi descobrir como iriamos baixar e armarzenar no nosso banco de dados postgresql a base de dados do governo referente aos registros de crimes registrados nas ruas da cidade. Então tivemos que correr atras de soluções que nos ajudasse a ter isso rápido pois são muitos registros. Conseguimos usando uma solução em python trabalhando com a manipulação de arquivos e conexão com o banco.<br> 
+	Após esse passo começamos a construir nosso diagrama de classes que foi bem complexo pois os dados se espalhavam em muitas tabelas e tornaram as consultas longas o que também foi outra dificuldade. Alguns integrantes do grupo não tinham muita intimidade com a linguagem de programação python e também sql. O horarário para realizar o trabalho foi complexo pois só alguns componentes podiam estar presente em alguns momentos.
 
 **LINK DAS ESTATÍSTICAS CRIMINAIS:**
 
@@ -172,5 +178,3 @@
 >Lista com cidades: https://github.com/Sidon/py-ufbr <br>
 
 
-**13 DIFICULDADES ENCONTRADAS PELO GRUPO**
-Inicialmente a principal dificuldade encontrada pelo o grupo foi descobrir como iriamos baixar e armarzenar no nosso banco de dados postgresql a base de dados do governo referente aos registros de crimes registrados nas ruas da cidade. Então tivemos que correr atras de soluções que nos ajudasse a ter isso rápido pois são muitos registros. Conseguimos usando uma solução em python trabalhando com a manipulação de arquivos e conexão com o banco.  Após esse passo começamos a construir nosso diagrama de classes que foi bem complexo pois os dados se espalhavam em muitas tabelas e tornaram as consultas longas o que também foi outra dificuldade. Alguns integrantes do grupo não tinham muita intimidade com a linguagem de programação python e também sql. O horarário para realizar o trabalho foi complexo pois só alguns componentes podiam estar presente em alguns momentos.
