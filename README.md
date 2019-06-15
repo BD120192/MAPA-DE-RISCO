@@ -38,9 +38,10 @@
 > https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/Descricao_Dados.txt
 
 ### 6.MODELO LÓGICO<br>
-> https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/L%C3%B3gico_2.png
+![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/L%C3%B3gico_2.png?raw=true "Title")
+
 ### 7.MODELO FÍSICO<br>
->https://github.com/BD120192/MAPA-DE-RISCO/blob/master/DATABASE/modelofisico.txt
+> https://github.com/BD120192/MAPA-DE-RISCO/blob/master/DATABASE/modelofisico.txt
 
 ### 8.INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 
