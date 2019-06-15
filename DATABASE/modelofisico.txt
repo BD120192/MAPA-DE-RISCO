@@ -1,0 +1,169 @@
+/* Lógico_1: */
+
+CREATE TABLE SEXO (
+    id serial PRIMARY KEY,
+    genero varchar
+);
+
+CREATE TABLE VITIMA (
+    id serial PRIMARY KEY,
+    idade int,
+    id_sexo serial,
+    FK_SEXO_id serial,
+    FK_CRIME_id serial
+);
+
+CREATE TABLE CRIME (
+    data date,
+    hora time,
+    id_vitima serial,
+    id serial PRIMARY KEY,
+    id_rua serial,
+    id_cidade serial,
+    id_tipo_crime serial,
+    id_bairro serial,
+    FK_TIPO_DE_CRIME_id serial,
+    FK_RUA_id serial
+);
+
+CREATE TABLE TIPO_DE_CRIME (
+    descricao_crime varchar[100],
+    id serial PRIMARY KEY
+);
+
+CREATE TABLE CIDADE (
+    id serial PRIMARY KEY,
+    nome_cidade varchar[100]
+);
+
+CREATE TABLE BAIRRO (
+    id serial PRIMARY KEY,
+    nome_bairro varchar[100],
+    id_ciadade serial,
+    FK_CIDADE_id serial
+);
+
+CREATE TABLE RUA (
+    id_bairro serial,
+    id_classificacao serial,
+    nome_rua varchar[100],
+    id serial PRIMARY KEY,
+    quantidade_crimes integer,
+    FK_BAIRRO_id serial,
+    FK_CLASSIFICACAO_DESCRICAO_id serial
+);
+
+CREATE TABLE CLASSIFICACAO_DESCRICAO (
+    tipo char,
+    id_descricao serial,
+    id serial PRIMARY KEY,
+    textopadrao varchar[100]
+);
+
+CREATE TABLE LINHA (
+    id serial PRIMARY KEY,
+    numero_linha varchar[50],
+    id_classificacao integer,
+    FK_CLASSIFICACAO_DESCRICAO_id serial
+);
+
+CREATE TABLE USUARIO (
+    nome char,
+    senha char,
+    cpf integer,
+    email char,
+    login char,
+    id serial PRIMARY KEY
+);
+
+CREATE TABLE COMENTARIO (
+    id serial PRIMARY KEY,
+    comentario_usuario varchar[100],
+    id_usuario serial,
+    id_tipo_comentario serial,
+    FK_TIPO_COMENTARIO_id serial,
+    FK_RUA_id serial,
+    FK_USUARIO_id serial,
+    FK_LINHA_id serial
+);
+
+CREATE TABLE TIPO_COMENTARIO (
+    id serial PRIMARY KEY,
+    descricao_tipo_comentario varchar[100]
+);
+
+CREATE TABLE Linha_Rua (
+    fk_LINHA_id serial,
+    fk_RUA_id serial,
+    id serial PRIMARY KEY
+);
+ 
+ALTER TABLE VITIMA ADD CONSTRAINT FK_VITIMA_2
+    FOREIGN KEY (FK_SEXO_id)
+    REFERENCES SEXO (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE VITIMA ADD CONSTRAINT FK_VITIMA_3
+    FOREIGN KEY (FK_CRIME_id)
+    REFERENCES CRIME (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE CRIME ADD CONSTRAINT FK_CRIME_2
+    FOREIGN KEY (FK_TIPO_DE_CRIME_id)
+    REFERENCES TIPO_DE_CRIME (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE CRIME ADD CONSTRAINT FK_CRIME_3
+    FOREIGN KEY (FK_RUA_id)
+    REFERENCES RUA (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE BAIRRO ADD CONSTRAINT FK_BAIRRO_2
+    FOREIGN KEY (FK_CIDADE_id)
+    REFERENCES CIDADE (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE RUA ADD CONSTRAINT FK_RUA_2
+    FOREIGN KEY (FK_BAIRRO_id)
+    REFERENCES BAIRRO (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE RUA ADD CONSTRAINT FK_RUA_3
+    FOREIGN KEY (FK_CLASSIFICACAO_DESCRICAO_id)
+    REFERENCES CLASSIFICACAO_DESCRICAO (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE LINHA ADD CONSTRAINT FK_LINHA_2
+    FOREIGN KEY (FK_CLASSIFICACAO_DESCRICAO_id)
+    REFERENCES CLASSIFICACAO_DESCRICAO (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE COMENTARIO ADD CONSTRAINT FK_COMENTARIO_2
+    FOREIGN KEY (FK_TIPO_COMENTARIO_id)
+    REFERENCES TIPO_COMENTARIO (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE COMENTARIO ADD CONSTRAINT FK_COMENTARIO_3
+    FOREIGN KEY (FK_RUA_id)
+    REFERENCES RUA (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE COMENTARIO ADD CONSTRAINT FK_COMENTARIO_4
+    FOREIGN KEY (FK_USUARIO_id)
+    REFERENCES USUARIO (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE COMENTARIO ADD CONSTRAINT FK_COMENTARIO_5
+    FOREIGN KEY (FK_LINHA_id)
+    REFERENCES LINHA (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Linha_Rua ADD CONSTRAINT FK_Linha_Rua_2
+    FOREIGN KEY (fk_LINHA_id)
+    REFERENCES LINHA (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Linha_Rua ADD CONSTRAINT FK_Linha_Rua_3
+    FOREIGN KEY (fk_RUA_id)
+    REFERENCES RUA (id)
+    ON DELETE RESTRICT;
