@@ -38,12 +38,15 @@
 > https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/Descricao_Dados.txt
 
 ### 6.MODELO LÓGICO<br>
-
+> https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA%202/L%C3%B3gico_2.png
 ### 7.MODELO FÍSICO<br>
+>https://github.com/BD120192/MAPA-DE-RISCO/blob/master/DATABASE/modelofisico.txt
 
 ### 8.INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 
+
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
+
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
 
@@ -136,3 +139,5 @@
 >Lista com cidades: https://github.com/Sidon/py-ufbr <br>
 
 
+**13 DIFICULDADES ENCONTRADAS PELO GRUPO**
+Inicialmente a principal dificuldade encontrada pelo o grupo foi descobrir como iriamos baixar e armarzenar no nosso banco de dados postgresql a base de dados do governo referente aos registros de crimes registrados nas ruas da cidade. Então tivemos que correr atras de soluções que nos ajudasse a ter isso rápido pois são muitos registros. Conseguimos usando uma solução em python trabalhando com a manipulação de arquivos e conexão com o banco.  Após esse passo começamos a construir nosso diagrama de classes que foi bem complexo pois os dados se espalhavam em muitas tabelas e tornaram as consultas longas o que também foi outra dificuldade. Alguns integrantes do grupo não tinham muita intimidade com a linguagem de programação python e também sql. O horarário para realizar o trabalho foi complexo pois só alguns componentes podiam estar presente em alguns momentos.
