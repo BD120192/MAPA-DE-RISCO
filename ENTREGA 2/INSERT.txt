@@ -1,0 +1,120 @@
+insert into bairro (nome_bairro,id_cidade) values ('MANGUINHOS',70),('JACARAIPE',70),('GOIABEIRAS',70),('COBILANDIA',77),('PRAIA DA COSTA',77),('SANTA LUCIA',78),('ITAPUA',77),('SANTA HELENA',78),('MORADA DE LARANJEIRAS',70),('MARUIPE',78),('JUCUTUQUARA',98),('LARANJEIRAS',99);
+
+INSERT INTO rua (nome_rua,quantidade_crimes,id_classificacao,id_bairro,id_cidade) values ('AV DES JOSE A M FEU ROSA',0','1','87','70'),('RODOVIA ES 010','0','87','1'),('RUA E','0','1','89','70'.),
+('RUA CARIOCA','0','1','44','70'),('BR 101','0','1','44','70'),('AV FERNANDO FERRARI','0','1','90','78'),('RUA DONA MARIA ROSA','0','1','37','78'),('AV MARUIPE','0','1','97','78'),('AV PAULINHO MULLER','0','1','98','78'),('AV VITORIA','0','1','98','78'),
+('RUA HENRIQUE NOVAES','0','1','21','78'),('AV JERONIMO MONTEIRO','0','1','21','78'),('AV REPUBLICA','0','1','21','78'),('AV CLETO NUNES','0','1','21','78'),('AV MARCOS DE AZEVEDO','0'.,'1','8','78'),('AV DUARTE LEMOS','0','1','8','78'),
+('AV NAIR DE AZEVEDO SILVA','0','1','8','78'),('AV ATERRO DA CONDUSA','0','1','8','78'),('AV ALEXANDRE BUAIZ','0','1','27','78'),('PONTE FLORENTINO AVIDOS','0','1','27','78'),('AV ROBERT KENNEDY','0','1','37','78'),('RUA MANOEL GILSON DA SILVA','0','1','16','77'),('PRAÇA DE SAO TORQUATO','0','1','16','77'),('AV GRAÇA ARANHA','0','1','16','77'),('RUA MAGNO COUTINHO','0','1','16','77'),('AV CARLOS LINDENBERG','1','1','61','77'),
+('AV TRECY CORTELIETE','0','1','61','77'),('AV ANA MEROTTO STEFANON','0','1','91',',77'),('AV JOÃO FRANCISCO GONÇALVES','0','1','91','77'),('RUA SÃO LUIZ','0','1','92','77'),('RUA D','0','1','4','70'),('RUA SÃO DOMINGOS','0','1','26','70'),
+('AV NOSSA SENHORA DA PENHA','0','1','93','78'),('AV.GETULIO VARGAS','1','1','65','77'),('AV ELIAS MIGUEL','0','1','65','77'),('RUA GODOFREDO SHNEIDER','0','1','36','77'),('AV LUCIANO DAS NEVES','0','1','92','77'),('RUA JAGUARIPE','0','1','94','77),
+('RUA HUMBERTO MARTINS DE PAULA','0','1','95','78'),('RUA ALAOR DE QUEIRÓS ARAUJO','0','1','95','78'),('RUA JOSE TEIXEIRA','0','1','95','78'),('RUA SÃO DOMINGOS','0','1','4','70'),('RUA D','0','1','4','70'),('RUA DOS SABIAS','0','1','4','70'),
+('AV.PAULO PEREIRA GOMES','0','1','96','70'),('TREVO DE LARANJEIRAS II','0','1','99','70'),('RUA A2','0','1','99','70'),('AV CIVIT','0','1','99','70'),('RODOVIA NORTE SUL','0','1','99','70'), 
+
+
+
+('CORREGO DO SOSSEGO','1','2',19','51'),('RUA JOSE PAULINO DE CARVALHO','1','2',16','77'),('RUA TEIXEIRA DE ALMEIDA','1','2','56','17'),('RUA DAS MARGARIDAS','1','2','80','70'),('BECO JUREMA BARROSO','1','2','27','78'),('RUA CACHOEIRAS','1','2','12','43'),('RUA OLINDO SHUAB','1','2','60','17'),
+('RUA JOAO RODRIGUES FILHO','1','2','56','17'),('BECO DO QUEBRA FACA','1','2','4',70'),('ESCADARIA SANTA BARBARA','1','2','22','78'),('RUA PIAUI','1','2','39','70'),('RUA JOAO BONICENHA','1','2','62','77'),('RUA CEARA','1','2','47','53'),('RUA JOAO RODRIGUES FILHO,'1','2','56','17'),('RUA TANCREDO NEVES','1','2','36','70'),
+('AV N SRA NAVEGANTES','1','2','25','70'),('COMUNIDADE RAINHA','1','2','24','56'),('COMUNIDADE RAINHA','1','2',23','17'),('RUA ALVARO SOUZA','1','2','50','9'),('RUA DARIO CUNHA','1','2','23','16'),('RUA AQUARIO','1','2','48','29'),('RUA DA CONSOLAÇÃO','1','2','34','56'),
+('RUA BAIXO GANDU','1','2','84','70'),('RUA ADELINO ROSSATO','1','2','85','9'),('RUA ITAPINA','1','2','7','70'),('RUA SILVIO AVIDOS','2','3','51','77'),
+('RUA DAS VIOLETAS','1','2','17','17'),('RUA SAO JUDAS TADEU','1','2','79','77'),('VALAO','1','2','57','17'),('RUA IGUATEMI','1','2','80','70'),('RUA D PEDRO II','1','2','17','17'),('ESTRADA DE IMBURI','1','2','9','45'),
+('RUA NOVE','1','2','3','17'),('RUA VISTA ALTA','1','2','78','70'),('RODOVIA AFONSO SCHWAB','1','2','33','63'),('POEIRAO','3','3','20','78'),('RODOVIA FEDERAL BR 101, KM 308,2','5','5','43','74'),('RUA DANIEL BASTOS','1','2','35','39'),('RUA PRINCIPAL','1','2','70','71'),
+('AV FERNANDO JOGAIDER','1','2','74','68'),('AV LOURIVAL NUNES','1','2','26','70'),('LOCALIDADE DE LIMÃO','1','2','36','55'),('RUA PORTO AZUL,'1','2','32','55'),('RUA PROF EUCLIDES DANTAS','1','2','15','49'),
+('RUA EUGENIO SALVADOR','1','2','38','39'),('RUA BOM PASTOR','1','2','11','68'),('RUA RODRIGUES ARZAO','1','2','2','78'),('RUA  DIOSCRONO CARNEIRO FILHO','1','2','1','78'),('RUA IBITINGA','1','2','72','16'),
+('ZONA RURAL','1','2','73','12'),('LOCALIDADE ALTO CÓRREGO DA AREIA','1','2','63','18'),('RUA CRUZEIRO DO SUL','1','2','36','77'),('AV FRANÇA,'2','2','5','77'),('CÓRREGO SANTA ANGELICA','1','2','24','12'),
+('RUA PROJETADA','1','2','49','73'),('AV VISTA ALEGRE','1','2','65','71'),('RUA MONTE BELO','1','2','13','43'),('AV PIRACICABA,'1','2','58','74'),('RUA ELIEZER GONCALVES DE JESUS','1','2','81','17'),
+('PEDRA DAGUA','1','2','62','77'),('COMUNIDADE NOSSA SENHORA DO CARMO','1','2','54','23'),('AV PRESIDENTE GETULIO VARGAS','1','2','4','70'),('RUA NORTE','1','2','82','28'),
+('RUA NORTE,'1','2','21','36'),('RODOVIA ROBERT KENEDY','1','2','68','77'),'('RUA MANOEL VEREZA','1','2','18','77'),('RUA RONDON PACHECO','1','2','63','74'),('AV SAO PAULO','1','2','10','26'),
+('AV SANTA LEOPOLDINA','1','2','40','77'),('RUA LIRIO GADIOLI','1','2','69','53'),('RUA AGUA MARINHA,'2','3','48','29'),('RUA MARINS DE ALVARINO','1','2','37','78'),('BECO DOIS,'2','2','79','77'),
+('RUA BEIRA MAR','1','2','41','77'),('RUA MOURISCO','1','2','62','77'),('AV ANESIO JOSE SIMOES','1','2','16','77'),('CORREGO TESOURO','1','2','76','42'),'('RUA DO TANQUE','1','2','17','17'),
+('RUA QUILOMBO DOS PALMARES','1','2','18','17'),('ZONA RURAL','1','2','64','39'),('FAZENDA VELOSO - CORREGO DO PENEIRA','1','2','29','53'),('BR 262 , KM 74 CANARINHO','1','2','76','23'),
+
+'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
