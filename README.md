@@ -146,6 +146,7 @@
 	WHERE id_vitima IN(SELECT id FROM vitima WHERE idade > 60  
 			    
 #### 9.11 RELATÓRIOS e GRÁFICOS - GRUPO
+> https://github.com/BD120192/MAPA-DE-RISCO/tree/master/RELATORIO
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
