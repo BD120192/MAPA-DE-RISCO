@@ -14,7 +14,6 @@ def insere_crime_base(lst_linhas):
 	for linha in lst_linhas:
 		#id = int(linha[0])
 		data = linha[1]
-		print(data)
 		hora = linha[2]
 		tipo_crime = linha[3]
 		sexo = linha[4]

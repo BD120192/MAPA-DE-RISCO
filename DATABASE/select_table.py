@@ -48,7 +48,6 @@ def verifica_rua(rua):
 
 	cur.execute("SELECT id FROM rua WHERE nome_rua = %s",(rua,))
 	tupla = (cur.fetchall())
-	print(tupla)
 	id_rua = tupla[0]
 
 	con.close()
