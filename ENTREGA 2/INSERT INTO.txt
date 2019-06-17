@@ -34,6 +34,9 @@ INSERT INTO rua (nome_rua,quantidade_crimes,id_classificacao,id_bairro,id_cidade
 ('RUA NAO INFORMADA,'1','2','44','70'),('RUA NAO CADASTRADA','1','2','14','77');
 
 
+INSERT INTO rua(nome_rua,quantidade_crimes,id_classificacao,id_bairro,id_cidade) VALUES('AV JERONIMO MONTEIRO',0,1,8,78);
+
+
 
 
 
