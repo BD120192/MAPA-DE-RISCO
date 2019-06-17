@@ -120,11 +120,44 @@
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6) - BRUNO
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6) - AROLDO
-      SELECT cr.id_cidade,ci.nome_cidade,COUNT(cr.id_cidade) FROM crime cr 
-	INNER JOIN cidade ci ON(cr.id_cidade = ci.id)
-	GROUP BY cr.id_cidade,ci.nome_cidade ORDER BY COUNT(*) DESC LIMIT(5);
+      	SELECT cr.id_cidade,ci.nome_cidade,COUNT(cr.id_cidade) FROM crime cr 
+	     INNER JOIN cidade ci ON(cr.id_cidade = ci.id)
+	     GROUP BY cr.id_cidade,ci.nome_cidade ORDER BY COUNT(*) DESC LIMIT(5);
+	     
+	SELECT cr.id_rua,ru.nome_rua,count(cr.id_rua) FROM crime cr
+             INNER JOIN rua ru ON(cr.id_rua = ru.id) GROUP BY cr.id_rua,ru.nome_rua
+             ORDER BY count(*) DESC LIMIT(5);
+	
+	SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
+             INNER JOIN vitima vi ON(cr.id_vitima = vi.id) INNER JOIN sexo se ON(vi.id_sexo = se.id)
+             INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
+             WHERE cr.id_rua = 73 ORDER BY cr.data;
+	     
+	SELECT cr.id,cr.data,cr.hora,vi.idade,se.genero,tc.descricao_crime FROM crime cr 
+	     INNER JOIN vitima vi ON(cr.id_vitima = vi.id) INNER JOIN sexo se ON(vi.id_sexo = se.id)
+	     INNER JOIN tipo_crime tc ON(cr.id_tipo_crime = tc.id)
+	     WHERE cr.id_rua = 160 ORDER BY cr.data
+	     
+	SELECT ru.id,ru.nome_rua,ba.nome_bairro,ci.nome_cidade,ru.quantidade_crimes,cl.tipo,de.textopadrao
+	    FROM rua ru INNER JOIN bairro ba ON (ru.id_bairro = ba.id) 
+	    INNER JOIN cidade ci ON (ru.id_cidade = ci.id)
+	    INNER JOIN classificacao cl ON (ru.id_classificacao = cl.id) 
+	    INNER JOIN descricao de ON(ru.id_classificacao = de.id)
+	    WHERE ru.nome_rua = 'POEIRAO' AND ba.nome_bairro = 'DO MOSCOSO' 
+	    AND ci.nome_cidade = 'VITORIA;
+	    
+	SELECT ru.id,ru.nome_rua,ba.nome_bairro,ci.nome_cidade,ru.quantidade_crimes,cl.tipo,de.textopadrao
+	    FROM rua ru INNER JOIN bairro ba on (ru.id_bairro = ba.id) 
+	    INNER JOIN cidade ci on (ru.id_cidade = ci.id)
+	    INNER JOIN classificacao cl on (ru.id_classificacao = cl.id) 
+	    INNER JOIN descricao de on(ru.id_classificacao = de.id)
+	    WHERE ru.nome_rua = 'AV CARLOS LINDENBERG' AND ba.nome_bairro = 'COBI DE BAIXO' 
+	    AND ci.nome_cidade = 'VILA VELHA;
 			
-#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6) 
+#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6) - WALERSON
+	SELECT * FROM cidade ORDER BY nome_cidade ASC LIMIT 5
+	SELECT * FROM bairro ORDER BY nome_bairro ASC LIMIT 5
+	
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4) - HEITOR
 	SELECT usuario.nome, comentario.comentario_usuario
 		FROM usuario RIGHT JOIN comentario
@@ -144,6 +177,7 @@
 
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6) - HEITOR
+
 #### 9.10	SUBCONSULTAS (Mínimo 3) - AROLDO
     SELECT * FROM crime WHERE id_vitima IN(SELECT id FROM vitima WHERE idade < 21)
       
@@ -163,6 +197,7 @@
 > https://github.com/BD120192/MAPA-DE-RISCO/tree/master/RELATORIO
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
+> https://docs.google.com/presentation/d/1q2iafbWRiqejRe0wEqpVlHx0WDv4WjWB4T9sXYGpl6c/edit?usp=sharing
 
 ### 11 BACKUP COMPLETO DO BANCO DE DADOS POSTGRESQL<br>
 
