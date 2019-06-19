@@ -24,6 +24,12 @@
 ![Alt text](https://github.com/BD120192/MAPA-DE-RISCO/blob/master/TELAS/comentario_enviado.JPG?raw=true "Title")
 
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
+	Qual é a classificação da  rua ou linha de ônibus quanto ao nível de segurança?
+	Quantos crimes ocorreram na  rua ou linha de ônibus?
+	Qual era(m)  o(os)  tipo(s) de crime(s) ?
+	Quando ocorreram os crimes da rua ou linha de ônibus?(O sistema informa data e hora)
+	Quais eram as idades e o sexo das vítimas dos crimes?
+	Qual é o itinerário de uma determinada linha? ou seja, por quais ruas a linha pesquisada passa.
 
 #### 4.2 TABELA DE DADOS DO SISTEMA
 > https://github.com/BD120192/MAPA-DE-RISCO/blob/master/ENTREGA1/Normalizacao1.xlsx
